@@ -1,0 +1,24 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Node modules (in case dependencies are installed)
+node_modules/
+package-lock.json
+
+# Local server caches and logs
+.sass-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
