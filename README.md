@@ -100,7 +100,7 @@ A premium, highly interactive personal portfolio website designed for **Aayush T
 * Powered by the optimized 3D tilt script to provide depth and interactive tracking.
 
 ### 8. Achievements
-* Displays LeetCode (400+ solved) and Production Apps metrics using live count-up stats counters, coupled with popup trophy badges.
+* Displays LeetCode (300+ solved) and Production Apps metrics using live count-up stats counters, coupled with popup trophy badges.
 
 ### 9. Contact
 * *Left Column*: Clean contact form featuring active floating inputs and golden glowing underline drawing states.

@@ -1020,22 +1020,34 @@ function playVoiceGreeting() {
       
       const voices = window.speechSynthesis.getVoices();
       
-      // Strict filter for Male English voices
-      let maleVoice = voices.find(v => 
-        (v.name.toLowerCase().includes('male') || 
-         v.name.includes('Mark') || // Windows Male
-         v.name.includes('David') || // Windows Desktop Male
-         v.name.includes('Alex') || // Mac Male
-         v.name.includes('Daniel') || // Mac UK Male
-         v.name.includes('Arthur') ||
-         v.name.includes('James')) && v.lang.startsWith('en')
-      );
+      // Strict filter for Male English voices, establishing the final voice
+      const preferredMaleVoices = [
+        'Google UK English Male',
+        'Microsoft David - English (United States)',
+        'Microsoft Mark - English (United States)',
+        'Microsoft David Desktop - English (United States)',
+        'Alex',
+        'Daniel',
+        'Arthur',
+        'James'
+      ];
+      
+      let maleVoice = null;
+      for (let name of preferredMaleVoices) {
+        maleVoice = voices.find(v => v.name === name || v.name.includes(name));
+        if (maleVoice) break;
+      }
+      
+      // Fallback to any voice with 'male' in the name
+      if (!maleVoice) {
+        maleVoice = voices.find(v => v.name.toLowerCase().includes('male') && v.lang.startsWith('en'));
+      }
 
       // If absolutely no male voice is found by name, we just pick the first voice, 
       // but pitch it down heavily so it sounds masculine
       if (maleVoice) {
         utterance.voice = maleVoice;
-        utterance.pitch = 0.9; 
+        utterance.pitch = 1.0; // Keep natural pitch for an actual male voice
       } else {
         utterance.pitch = 0.5; // Deepen the voice forcefully if it defaults to female
       }
