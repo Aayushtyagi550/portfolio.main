@@ -1014,6 +1014,9 @@ function playVoiceGreeting() {
     const utterance = new SpeechSynthesisUtterance(text);
     
     const setVoiceAndSpeak = () => {
+      // Prevent multiple triggers when voices load asynchronously
+      window.speechSynthesis.onvoiceschanged = null;
+      
       const voices = window.speechSynthesis.getVoices();
       
       // Strict filter for Male English voices
