@@ -656,10 +656,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inject welcome banner art
     if (consoleOutputLog) {
       consoleOutputLog.innerHTML = `
-<div class="console-line ascii-art"> _   _  _   ___ _   _ ___  _______     __
-| | | |/_\\ / __| | | |   \\| __\\ \\ \\   / /
-| |_| / _ \\\\__ \\ |_| | |) | _| \\ \\ \\ / / 
- \\___/_/ \\_\\___/\\___/|___/|___| \\_\\_/_/  </div>
+<div class="console-line ascii-art">     _         _     __  __   _   _    ____    _   _  
+    / \\       / \\    \\ \\/ /  | | | |  / ___|  | | | | 
+   / _ \\     / _ \\    \\  /   | | | |  \\___ \\  | |_| | 
+  / ___ \\   / ___ \\   /  \\   | |_| |   ___) | |  _  | 
+ /_/   \\_\\ /_/   \\_\\ /_/\\_\\   \\___/   |____/  |_| |_| </div>
 <div class="console-line system-msg">Welcome to Aayush's Interactive Terminal CLI v1.0.0.</div>
 <div class="console-line system-msg">Type 'help' to see all available commands.</div>
 <div class="console-line system-msg">[Tip: Press keyboard hotkeys (when console is closed) to scroll: 's' skills, 'p' projects, 'c' contact, 'e' education, 'a' about]</div>
