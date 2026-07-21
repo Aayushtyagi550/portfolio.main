@@ -1,315 +1,1441 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aayush Tyagi | Full Stack Developer</title>
-  <meta name="description"
-    content="Portfolio of Aayush Tyagi, a Full Stack Web Developer specializing in building end-to-end web solutions.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script type="module" crossorigin src="/assets/index-Fz5cCKhF.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-B-fYR9VV.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aayush Tyagi — Software Engineer | Java & DSA | Full-Stack (MERN)</title>
+  <meta name="description" content="Personal portfolio of Aayush Tyagi, a Software Engineer specializing in Java, DSA, and MERN stack development. Building AI-integrated web platforms.">
+  
+  <!-- Premium Fonts Pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@700;800&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://www.goat1000.com/tagcanvas.min.js" defer></script>
 </head>
-
 <body>
-  <!-- Background Blobs -->
-  <div class="blob" id="blob1"></div>
-  <div class="blob" id="blob2"></div>
 
-  <nav>
-    <div class="logo">AT.</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Terminal Boot Sequence Overlay -->
+  <div id="bootOverlay" class="boot-overlay-screen">
+    <script>
+      if (sessionStorage.getItem('vk_booted') === 'true') {
+        document.getElementById('bootOverlay').style.display = 'none';
+      }
+    </script>
+    <div class="boot-log-container">
+      <div class="boot-line">aayush.tyagi_ OS [Version 1.0.0]</div>
+      <div class="boot-line">------------------------------------</div>
+      <div class="boot-line delay-1">[OK] Initializing memory registers...</div>
+      <div class="boot-line delay-2">[OK] Loading Java/DSA core modules...</div>
+      <div class="boot-line delay-3">[OK] Mounting MERN stack filesystem...</div>
+      <div class="boot-line delay-4">[OK] Resolving AI dependencies (spaCy, Tesseract)...</div>
+      <div class="boot-line delay-5">[OK] Spawning visual interfaces...</div>
+      <div class="boot-line delay-6">[OK] Establishing secure connection...</div>
+      <div class="boot-line delay-7 success">System online. Redirecting to GUI...</div>
+    </div>
+    <div class="boot-progress-container">
+      <div id="bootProgressBar" class="boot-progress-bar"></div>
+    </div>
+    <div class="boot-progress-info">
+      <span class="boot-progress-text">LOADING EXPERIENCE</span>
+      <span id="bootProgressPercent" class="boot-progress-percent">0%</span>
+    </div>
+    <button id="skipBootBtn" class="skip-boot-btn" aria-label="Skip Boot Sequence">Skip Boot [ESC]</button>
+  </div>
 
-  <main id="app">
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h2 class="reveal">HELLO, I'M</h2>
-        <h1 class="reveal">Aayush <span class="gradient-text">Tyagi</span></h1>
-        <p class="reveal">Full Stack Web Developer building complete web solutions — from intuitive frontend interfaces
-          to
-          powerful backend systems.</p>
-        <div class="cta-buttons reveal">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-        </div>
+
+  <!-- Ambient Background System -->
+  <div class="bg-orbs-container">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="nav-container">
+      <!-- Logo (Left) -->
+      <a href="#landing" class="logo">aayush<span class="logo-dot">.</span>tyagi<span class="cursor-blink">_</span></a>
+      
+      <!-- Nav Navigation (Center) -->
+      <div class="nav-menu-group">
+        <!-- Home Button -->
+        <a href="#landing" class="nav-home-btn" aria-label="Home">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        
+        <!-- Separator -->
+        <span class="nav-sep"></span>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certificates</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="mobile-only"><a href="assets/Aayush_Tyagi_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+        </ul>
       </div>
-      <div class="hero-image-container reveal">
-        <div class="hero-image-wrapper">
-          <img src="/profile.jpg" alt="Aayush Tyagi" class="profile-img">
+
+      <!-- Right Group (Actions & Hamburger Toggle) -->
+      <div class="nav-right-group">
+        <!-- Actions (Right) -->
+        <div class="nav-actions">
+          <!-- Resume Badge Link -->
+          <a href="assets/Aayush_Tyagi_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-badge-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span>RESUME</span>
+          </a>
+          
+          <!-- Monospace Toggle Button -->
+          <button id="monoToggle" class="nav-mono-btn" aria-label="Toggle monospace font">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span class="mono-text">MONO</span>
+          </button>
+          <!-- Theme Toggle Button -->
+          <button id="themeToggle" class="nav-theme-btn" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg class="moon-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <span class="theme-text">DARK</span>
+          </button>
+        </div>
+        
+        <!-- Mobile Hamburger Toggle -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12" class="line-mid"></line>
+            <line x1="3" y1="6" x2="21" y2="6" class="line-top"></line>
+            <line x1="3" y1="18" x2="21" y2="18" class="line-bottom"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main>
+
+    <!-- PAGE 1: LANDING -->
+    <section id="landing" class="landing-section">
+      <!-- Floating Top-Left GIF -->
+      <img src="assets/gif.gif" alt="Animated element" class="landing-floating-gif">
+
+      <!-- Floating Right Socials Panel -->
+      <div class="landing-floating-socials">
+        <span class="socials-label">SOCIALS</span>
+        <div class="socials-line"></div>
+        <a href="mailto:aayushtyagi728@gmail.com" class="floating-social-link">
+          <span>Email</span>
+          <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aayush-tyagi-39160b359/" target="_blank" rel="noopener noreferrer" class="floating-social-link">
+          <span>LinkedIn</span>
+          <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <a href="https://github.com/Aayushtyagi550" target="_blank" rel="noopener noreferrer" class="floating-social-link">
+          <span>GitHub</span>
+          <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+        <a href="https://www.instagram.com/tyagi__aayush_?igsh=djNlbnpkYmp2NTJu" target="_blank" rel="noopener noreferrer" class="floating-social-link">
+          <span>Instagram</span>
+          <svg class="external-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="landing-content container">
+        <h1 class="landing-title animate-title">Aayush Tyagi<span class="logo-dot">.</span></h1>
+        <div class="landing-designation animate-designation">
+          <span>Software Engineer</span>
+          <span class="divider">|</span>
+          <span>Python &amp; SQL</span>
+          <span class="divider">|</span>
+          <span>Full-Stack (MERN)</span>
+        </div>
+        <p class="landing-intro animate-intro">
+          Full Stack Developer with experience in building scalable web applications. Skilled in frontend and backend technologies, APIs, and databases. Interested in AI-based solutions.
+        </p>
+        
+        <div class="landing-ctas animate-ctas">
+          <a href="#projects" class="btn btn-primary">View Selected Work <span class="btn-arrow">↘</span></a>
+          <a href="#about" class="btn btn-secondary">Explore Profile <span class="btn-arrow">↗</span></a>
+        </div>
+        
+        <div class="landing-socials animate-socials">
+          <a href="mailto:aayushtyagi728@gmail.com" class="social-icon" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/aayush-tyagi-39160b359/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://github.com/Aayushtyagi550" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/tyagi__aayush_?igsh=djNlbnpkYmp2NTJu" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="reveal">
-      <h2 class="section-title">About Me</h2>
-      <div
-        style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.2rem; opacity: 0.8; margin-bottom: 3rem;">
-        <p>I combine problem-solving skills with clean code practices to deliver scalable and efficient applications. I
-          thrive on creating seamless user experiences powered by robust and high-performing backends.</p>
-      </div>
-
-      <!-- Education & Experience Grid -->
-      <div class="about-grid">
-        <div class="info-card reveal">
-          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h4>B.Tech in Computer Science and Engineering</h4>
-              <p class="timeline-subtitle">Meerut Institute of Engineering and Technology &bull; 2023 - 2027</p>
-              <p>Relevant Coursework: Data Structures & Algorithms, Web Technologies, Database Management Systems</p>
+    <!-- PAGE 2: ABOUT ME -->
+    <section id="about" class="about-section scroll-trigger">
+      <div class="container">
+        <div class="terminal-prompt" data-cmd="cd ~/about-me"></div>
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="about-grid">
+          <!-- Profile Pic & Work CTAs Column -->
+          <div class="about-profile-col">
+            <div class="avatar-container trigger-avatar">
+              <img src="assets/picture.jpeg" alt="Aayush Tyagi" class="profile-img">
+            </div>
+            
+            <div class="work-buttons-container trigger-buttons">
+              <a href="#education" class="btn btn-work-link">Education <span class="arrow">→</span></a>
+              <a href="#projects" class="btn btn-work-link">Projects <span class="arrow">→</span></a>
+              <a href="#skills" class="btn btn-work-link">Skills <span class="arrow">→</span></a>
+              <a href="#certifications" class="btn btn-work-link">Certifications <span class="arrow">→</span></a>
+            </div>
+          </div>
+          
+          <!-- Summary & Mission/Vision Column -->
+          <div class="about-content-col">
+            <p class="about-summary trigger-summary">
+              "I\'m a Full Stack Developer with experience in building scalable web applications. My foundation is in Python, Java, JavaScript, and SQL. On the applied side, I work across the MERN stack (React.js, Node.js, Express.js, MongoDB) to design REST APIs, model databases, and ship interfaces that hold up under real use. My recent projects lean into AI integration, including platforms for disease prediction using ML, OCR, and NLP."
+            </p>
+            
+            <div class="mission-vision-cards">
+              <div class="mv-card trigger-mission">
+                <div class="mv-card-inner">
+                  <div class="mv-card-front">
+                    <div class="terminal-card-header" data-title="mission.sh"></div>
+                    <div class="mv-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                      </svg>
+                    </div>
+                    <h3>Mission</h3>
+                  </div>
+                  <div class="mv-card-back">
+                    <div class="terminal-card-header" data-title="mission_output.log"></div>
+                    <h3>My Mission</h3>
+                    <p>"To build software that turns complexity into clarity — using AI, clean architecture, and scalable engineering to solve problems that actually matter to the people using it."</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mv-card trigger-vision">
+                <div class="mv-card-inner">
+                  <div class="mv-card-front">
+                    <div class="terminal-card-header" data-title="vision.sh"></div>
+                    <div class="mv-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                    </div>
+                    <h3>Vision</h3>
+                  </div>
+                  <div class="mv-card-back">
+                    <div class="terminal-card-header" data-title="vision_output.log"></div>
+                    <h3>My Vision</h3>
+                    <p>"To grow into an engineer trusted to take ambiguous problems and ship reliable, production-ready systems — and to keep learning at the pace the field demands."</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="info-card reveal">
-          <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h4>Full Stack Java Developer Intern</h4>
-              <p class="timeline-subtitle">EduSkills Foundation &bull; Remote</p>
+    <!-- PAGE 3: EDUCATION -->
+    <section id="education" class="education-section scroll-trigger">
+      <div class="container">
+        <div class="terminal-prompt" data-cmd="cat education_history.log"></div>
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-cards-grid">
+          <!-- Card 1: B.Tech (Drops from above, rotated) -->
+          <div class="edu-card edu-card-1 trigger-edu-1">
+            <div class="terminal-card-header" data-title="btech_degree.conf"></div>
+            <!-- SVG stroke tracing elements -->
+            <svg class="edu-border-svg" width="100%" height="100%">
+              <rect class="edu-border-rect" x="0" y="0" width="100%" height="100%" rx="12"></rect>
+            </svg>
+            <div class="edu-badge">Full-time</div>
+            <div class="edu-header">
+              <span class="edu-duration">2023 – 2027</span>
+              <h3>B.Tech, Computer Science and Engineering</h3>
+              <p class="edu-inst">Meerut Institute of Engineering and Technology, Meerut, India</p>
+            </div>
+            <div class="edu-highlights">
+              <h4>Key Highlights:</h4>
               <ul>
-                <li>Completed hands-on training and implementation of full-stack web applications using Java.</li>
-                <li>Built interactive frontend interfaces and integrated robust backend services.</li>
-                <li>Technologies used: Java, Spring Boot, MySQL, React.</li>
+                <li class="typewriter-bullet">Maintaining a GPA of 9.0 / 10.0</li>
+                <li class="typewriter-bullet">Core coursework in OOPs, DBMS, Computer Networks, DSA, and Operating Systems</li>
               </ul>
             </div>
+            <div class="edu-icon-toss">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+              </svg>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="reveal">
-      <h2 class="section-title">My Toolbox</h2>
-      <div class="skills-container">
-        <div class="skill-card reveal">
-          <h3><i class="fas fa-code"></i> Programming Languages</h3>
-          <div class="skill-list">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">[Add More]</span>
+          <!-- Card 2: Class 12th (Rises from below) -->
+          <div class="edu-card edu-card-2 trigger-edu-2">
+            <div class="terminal-card-header" data-title="class_12th.log"></div>
+            <svg class="edu-border-svg" width="100%" height="100%">
+              <rect class="edu-border-rect" x="0" y="0" width="100%" height="100%" rx="12"></rect>
+            </svg>
+            <div class="edu-badge">Full-time</div>
+            <div class="edu-header">
+              <span class="edu-duration">2022 – 2023</span>
+              <h3>Class 12th</h3>
+              <p class="edu-inst">Guru Govind Singh Public School</p>
+            </div>
+            <div class="edu-highlights">
+              <h4>Key Highlights:</h4>
+              <ul>
+                <li class="typewriter-bullet">Scored 92%</li>
+                <li class="typewriter-bullet">Built foundation ahead of Computer Science specialization</li>
+              </ul>
+            </div>
+            <div class="edu-icon-toss">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+              </svg>
+            </div>
           </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3><i class="fas fa-laptop-code"></i> Full Stack & Web</h3>
-          <div class="skill-list">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">Spring Boot</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3><i class="fas fa-database"></i> Databases</h3>
-          <div class="skill-list">
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">SQL</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-          <div class="skill-list">
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">Postman</span>
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Vercel / Netlify</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="reveal">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <!-- Project: SymptoGenie -->
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="/symptogenie.png" alt="SymptoGenie - AI Healthcare Assistant" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="project-info">
-            <h3>SymptoGenie</h3>
-            <p>An AI-powered healthcare assistant enabling instant symptom analysis, medical report processing, hospital discovery, and a virtual health advisor.</p>
-            <div class="project-tags">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">OpenAI</span>
+          <!-- Card 3: Class 10th (Rises from below, staggered) -->
+          <div class="edu-card edu-card-3 trigger-edu-3">
+            <div class="terminal-card-header" data-title="class_10th.log"></div>
+            <svg class="edu-border-svg" width="100%" height="100%">
+              <rect class="edu-border-rect" x="0" y="0" width="100%" height="100%" rx="12"></rect>
+            </svg>
+            <div class="edu-badge">Full-time</div>
+            <div class="edu-header">
+              <span class="edu-duration">2020 – 2021</span>
+              <h3>Class 10th</h3>
+              <p class="edu-inst">Guru Govind Singh Public School</p>
             </div>
-            <div style="display: flex; gap: 1rem;">
-              <a href="https://symptogenie-a-health-monitoring-platform.onrender.com/dashboard" target="_blank" class="btn btn-primary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Live Demo</a>
-              <a href="https://github.com/Aayushtyagi550/SymptoGenie" target="_blank" class="btn btn-secondary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Source Code</a>
+            <div class="edu-highlights">
+              <h4>Key Highlights:</h4>
+              <ul>
+                <li class="typewriter-bullet">Scored 81%</li>
+              </ul>
             </div>
-          </div>
-        </div>
-
-        <!-- Project 0 (MelodyVerse) -->
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="/melodyverse.png" alt="MelodyVerse Music Streaming" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="project-info">
-            <h3>MelodyVerse</h3>
-            <p>A full-stack music streaming platform with AI assistant, real-time search, and seamless playback.</p>
-            <div class="project-tags">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">AI</span>
-            </div>
-            <div style="display: flex; gap: 1rem;">
-              <a href="https://medlodyverse-music-streaming-site-1.onrender.com" target="_blank" class="btn btn-primary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Live Demo</a>
-              <a href="https://github.com/Aayushtyagi550/Medlodyverse-music-streaming-site" target="_blank" class="btn btn-secondary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Source Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project 1 -->
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="/taskflow.png" alt="TaskFlow Dashboard" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="project-info">
-            <h3>TaskFlow</h3>
-            <p>A comprehensive task management application designed for productivity and team collaboration.</p>
-            <div class="project-tags">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">MongoDB</span>
-            </div>
-            <div style="display: flex; gap: 1rem;">
-              <a href="https://my-task-manager-taupe.vercel.app" target="_blank" class="btn btn-primary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Live Demo</a>
-              <a href="https://github.com/Aayushtyagi550/my-task-manager" target="_blank" class="btn btn-secondary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Source Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="/netflix.png" alt="Netflix Clone UI" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="project-info">
-            <h3>Netflix Clone</h3>
-            <p>A pixel-perfect UI clone of Netflix with dynamic movie listing and categorized browsing.</p>
-            <div class="project-tags">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Firebase</span>
-              <span class="skill-tag">TMDB API</span>
-            </div>
-            <a href="https://github.com/Aayushtyagi550/https---github.com-Aayushtyagi550-netflix-clone" target="_blank"
-              class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Source Code</a>
-          </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="/portfolio.png" alt="Portfolio Site UI" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="project-info">
-            <h3>Portfolio Website</h3>
-            <p>The very site you're visiting! Crafted with a focus on animations and aesthetic appeal.</p>
-            <div class="project-tags">
-              <span class="skill-tag">Vite</span>
-              <span class="skill-tag">Vanilla JS</span>
-              <span class="skill-tag">CSS3</span>
-            </div>
-            <div style="display: flex; gap: 1rem;">
-              <a href="https://myportfolio2-tau.vercel.app/" target="_blank" class="btn btn-primary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Live Demo</a>
-              <a href="https://github.com/Aayushtyagi550/portfolio-site" target="_blank" class="btn btn-secondary"
-                style="padding: 0.5rem 1.5rem; font-size: 0.9rem; flex: 1; text-align: center;">Source Code</a>
+            <div class="edu-icon-toss">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+              </svg>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="reveal">
-      <h2 class="section-title">Achievements & Certifications</h2>
-      <div class="achievements-grid">
-
-        <!-- LeetCode Card -->
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="achievement-info">
-            <h3>LeetCode Achievements</h3>
-            <p>Active problem solver on LeetCode with a strong focus on Data Structures and Algorithms.</p>
-            <div class="project-tags">
-              <span class="skill-tag">Data Structures</span>
-              <span class="skill-tag">Algorithms</span>
+    <!-- PAGE 4: PROJECTS -->
+    <section id="projects" class="projects-section scroll-trigger">
+      <div class="container">
+        <div class="terminal-prompt" data-cmd="ls -la ./featured_projects"></div>
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="projects-container">
+          
+          <!-- Project 1: SymptoGenie -->
+          <article class="project-split-card trigger-project">
+            <!-- Left Column: Browser Mockup -->
+            <div class="project-visual-column">
+              <div class="browser-mockup">
+                <div class="browser-top-bar">
+                  <div class="browser-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                  </div>
+                  <div class="browser-address-bar">symptogenie-a-health-monitoring-platform.onrender.com/dashboard</div>
+                </div>
+                <div class="browser-content">
+                  <div class="proj-screenshot-container" data-current="0" data-images="assets/SymptoGenie SS1.png,assets/SymptoGenie SS2.png,assets/SymptoGenie SS3.png">
+                    <img src="assets/SymptoGenie SS1.png" alt="SymptoGenie Screenshot" class="proj-screenshot">
+                    <div class="gallery-indicator">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <a href="https://leetcode.com/u/tyagiaayush0007/" target="_blank" class="btn btn-secondary"
-              style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">View Complete
-              Profile</a>
-          </div>
-        </div>
+            
+            <!-- Right Column: Project Info -->
+            <div class="project-info-column">
+              <div class="proj-info-left">
+                <div class="proj-meta">
+                  <span class="proj-type">AI Healthcare Assistant App</span>
+                  <span class="proj-duration">Jan 2026 – Apr 2026</span>
+                </div>
+                <h3 class="proj-title"><span class="proj-cli-prompt">aayush@portfolio:~$</span> <span class="proj-cli-exec">./01_</span><span class="proj-name">symptogenie</span><span class="title-cursor">▮</span></h3>
+                <p class="proj-desc-short">An AI-powered platform that triages common ailments using weighted scoring and medical ontologies, extracts structured data from medical reports via OCR/NLP, and recommends nearby hospitals in real time.</p>
+                
+                <div class="tech-tags-container">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">Google Maps API</span>
+                  <span class="tech-tag">Tesseract OCR</span>
+                  <span class="tech-tag">spaCy</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">JWT</span>
+                </div>
 
-        <!-- Certifications Card -->
-        <div class="achievement-card reveal">
-          <div class="achievement-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <div class="achievement-info">
-            <h3>Certifications</h3>
-            <ul class="cert-list">
-              <li>Oracle Certification</li>
-              <li>Internship Certificate</li>
-              <li>UI Path Certificate</li>
-              <li>MongoDB Certificate</li>
-            </ul>
-          </div>
-        </div>
+                <div class="proj-links">
+                  <a href="https://github.com/Aayushtyagi550/SymptoGenie---AI-Health-App.git" target="_blank" rel="noopener noreferrer" class="proj-btn">
+                    <span>GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="https://symptogenie-a-health-monitoring-platform.onrender.com/dashboard" target="_blank" rel="noopener noreferrer" class="proj-btn">
+                    <span>Live Demo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
 
+              <div class="proj-info-right">
+                <h4>Key Outcomes:</h4>
+                <div class="outcomes-list">
+                  <div class="outcome-box">
+                    <span class="outcome-num">1</span>
+                    <p>Engineered a weighted-scoring symptom analysis engine using medical ontologies for ailment triage</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">2</span>
+                    <p>Built an OCR/NLP pipeline (Tesseract + spaCy) to structure data from medical reports (PDF/Images)</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">3</span>
+                    <p>Integrated geolocation APIs for real-time hospital recommendations within a 15km radius</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">4</span>
+                    <p>Optimized MongoDB schemas with proper indexing to reduce query overhead</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Project 2: MelodyVerse -->
+          <article class="project-split-card trigger-project">
+            <!-- Left Column: Browser Mockup -->
+            <div class="project-visual-column">
+              <div class="browser-mockup">
+                <div class="browser-top-bar">
+                  <div class="browser-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                  </div>
+                  <div class="browser-address-bar">melodyverse-web-music-player.onrender.com/</div>
+                </div>
+                <div class="browser-content">
+                  <div class="proj-screenshot-container" data-current="0" data-images="assets/MelodyVerse SS1.png,assets/MelodyVerse SS2.png,assets/MelodyVerse SS3.png">
+                    <img src="assets/MelodyVerse SS1.png" alt="MelodyVerse Screenshot" class="proj-screenshot">
+                    <div class="gallery-indicator">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column: Project Info -->
+            <div class="project-info-column">
+              <div class="proj-info-left">
+                <div class="proj-meta">
+                  <span class="proj-type">AI-Powered Music Streaming App</span>
+                  <span class="proj-duration">Mar 2026 – May 2026</span>
+                </div>
+                <h3 class="proj-title"><span class="proj-cli-prompt">aayush@portfolio:~$</span> <span class="proj-cli-exec">./02_</span><span class="proj-name">melodyverse</span><span class="title-cursor">▮</span></h3>
+                <p class="proj-desc-short">A MERN-stack music streaming platform featuring a Gemini-powered voice assistant and real-time facial emotion detection to curate mood-based playlists, built for zero-interruption playback.</p>
+                
+                <div class="tech-tags-container">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">Google Gemini API</span>
+                  <span class="tech-tag">face-api.js</span>
+                  <span class="tech-tag">Redis</span>
+                  <span class="tech-tag">Context API</span>
+                </div>
+
+                <div class="proj-links">
+                  <a href="https://github.com/Aayushtyagi550/MelodyVerse---Web-Music-Player.git" target="_blank" rel="noopener noreferrer" class="proj-btn">
+                    <span>GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="https://melodyverse-web-music-player.onrender.com/" target="_blank" rel="noopener noreferrer" class="proj-btn">
+                    <span>Live Demo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="proj-info-right">
+                <h4>Key Outcomes:</h4>
+                <div class="outcomes-list">
+                  <div class="outcome-box">
+                    <span class="outcome-num">1</span>
+                    <p>Developed "MelodyBot," a voice assistant powered by Google Gemini 2.5 Flash for natural-language music queries</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">2</span>
+                    <p>Integrated face-api.js for real-time facial emotion detection across 8 core moods</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">3</span>
+                    <p>Engineered a Redis caching layer to minimize redundant API calls and reduce latency</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">4</span>
+                    <p>Achieved a Lighthouse performance score of 95+ with real-time search indexing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+        
+          <!-- Project 3: TaskFlow -->
+          <article class="project-split-card trigger-project">
+            <div class="project-visual-column">
+              <div class="browser-mockup">
+                <div class="browser-top-bar">
+                  <div class="browser-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                  </div>
+                  <div class="browser-address-bar">my-task-manager-taupe.vercel.app/</div>
+                </div>
+                <div class="browser-content">
+                  <div class="proj-screenshot-container" data-current="0" data-images="assets/TaskFlow.png">
+                    <img src="assets/TaskFlow.png" alt="TaskFlow Screenshot" class="proj-screenshot" >
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="project-info-column">
+              <div class="proj-info-left">
+                <div class="proj-meta">
+                  <span class="proj-type">Task Manager App</span>
+                </div>
+                <h3 class="proj-title"><span class="proj-cli-prompt">aayush@portfolio:~$</span> <span class="proj-cli-exec">./03_</span><span class="proj-name">taskflow</span><span class="title-cursor">?</span></h3>
+                <p class="proj-desc-short">Task manager with CRUD operations and localStorage.</p>
+                
+                <div class="tech-tags-container">
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">localStorage</span>
+                </div>
+                <div class="proj-links">
+                  <a href="https://github.com/Aayushtyagi550/my-task-manager" target="_blank" rel="noopener noreferrer" class="proj-btn">
+                    <span>GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="https://my-task-manager-taupe.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-btn">
+                    <span>Live Demo</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+              <div class="proj-info-right">
+                <h4>Key Outcomes:</h4>
+                <div class="outcomes-list">
+                  <div class="outcome-box">
+                    <span class="outcome-num">1</span>
+                    <p>Engineered a highly responsive Task Manager application enabling seamless CRUD operations.</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">2</span>
+                    <p>Implemented robust state management utilizing modern React Hooks.</p>
+                  </div>
+                  <div class="outcome-box">
+                    <span class="outcome-num">3</span>
+                    <p>Integrated browser localStorage to ensure persistent data retention across user sessions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="reveal" style="text-align: center;">
-      <h2 class="section-title">Let's Connect</h2>
-      <p style="font-size: 1.5rem; margin-bottom: 2rem;">Ready to bring your project to life?</p>
-      <a href="mailto:aayushtyagi728@gmail.com" class="btn btn-primary">Send an Email</a>
-      <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 2rem; font-size: 1.5rem;">
-        <a href="https://github.com/Aayushtyagi550" target="_blank"
-          style="color: white; opacity: 0.6; text-decoration: none; transition: 0.3s;"
-          onmouseover="this.style.opacity='1'; this.style.color='var(--primary-color)'"
-          onmouseout="this.style.opacity='0.6'; this.style.color='white'"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/aayush-tyagi-39160b359" target="_blank"
-          style="color: white; opacity: 0.6; text-decoration: none; transition: 0.3s;"
-          onmouseover="this.style.opacity='1'; this.style.color='var(--primary-color)'"
-          onmouseout="this.style.opacity='0.6'; this.style.color='white'"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/tyagi__aayush_?igsh=djNlbnpkYmp2NTJu" target="_blank"
-          style="color: white; opacity: 0.6; text-decoration: none; transition: 0.3s;"
-          onmouseover="this.style.opacity='1'; this.style.color='var(--primary-color)'"
-          onmouseout="this.style.opacity='0.6'; this.style.color='white'"><i class="fab fa-instagram"></i></a>
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="process-section scroll-trigger">
+      <div class="container">
+        <div class="terminal-prompt" data-cmd="cat work_experience.sh"></div>
+        <h2 class="section-title">Experience</h2>
+        <div class="process-grid">
+          
+          <div class="process-card trigger-process-card" style="grid-column: 1 / -1;">
+            <div class="process-number">01</div>
+            <div class="process-card-content">
+              <h3>Full Stack Developer Intern – Eduskills</h3>
+              <p><strong>Jan 2026 – Mar 2026</strong></p>
+              <ul style="color: var(--text-muted); padding-left: 20px; line-height: 1.6; margin-top: 10px;">
+                <li>Actively contributed to the design and development of robust, full-stack web applications utilizing Java and Spring Boot for backend architecture.</li>
+                <li>Collaborated closely with cross-functional teams to build highly responsive user interfaces using React.js and engineered secure RESTful APIs.</li>
+                <li>Optimized relational database schemas and SQL queries, resulting in significantly faster data retrieval and improved system performance.</li>
+                <li>Gained hands-on experience in debugging complex issues, writing clean, maintainable code, and deploying scalable Java-based solutions.</li>
+              </ul>
+              <div class="proj-links" style="margin-top: 20px;">
+                  <a href="assets/internship.png" target="_blank" rel="noopener noreferrer" class="proj-btn">
+                    <span>View Certificate</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
+
+
+    <!-- PAGE 5: SKILLS -->
+    <section id="skills" class="skills-section scroll-trigger">
+      <div class="container">
+        <div class="terminal-prompt" data-cmd="run-diagnostics --skills"></div>
+        <h2 class="section-title">Skills Toolkit</h2>
+        
+        <div class="skills-grid-container">
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card trigger-skill-card">
+            <div class="terminal-card-header" data-title="languages.env"></div>
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Languages</h3>
+            </div>
+            <div class="skills-tag-grid">
+              <div class="skill-badge" data-log="[JVM READY]: Bytecode compiled. OOP engine running. Thread pool initialized.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16">
+                    <path d="M6.16 18.29c.14-.15.26-.33.32-.54.06-.21.05-.44-.02-.64a1.73 1.73 0 00-.73-.91c-.32-.2-.72-.27-1.1-.2a2.38 2.38 0 00-.91.43c-.27.2-.48.47-.61.79-.13.31-.17.65-.11.98.05.33.2.64.44.87.23.23.54.38.87.43a2.3 2.3 0 001.35-.15c.32-.15.58-.38.77-.66.19-.29.31-.61.35-.95l-.65-.05zm-.39 2.05a5.55 5.55 0 01-3.66.42" stroke="#ea2d2e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                    <path d="M12.44 14.5c.87-2.15.54-5.38-1.5-6.95-1.5-1.15-2.2-2.92-1.78-4.7.46.96-.34 3.02-1.4 3.9C6.46 7.8 6.04 9.57 6.46 11.23c.36 1.43 1.48 2.5 2.9 3 1 .37 2.15.42 3.08.27zm3.17.63c.53-.16 1.05-.38 1.55-.65 1.77-.96 2.38-2.6 1.34-3.66-.75-.76-2.1-1-3-.6" stroke="#007396" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <path d="M4 17.5c4-1 8-1 12 0 1.5.3 3 .8 4.5 1.5M2 20c4.5-1.5 9-1.5 13.5 0 2 .6 4 1.5 6 2.5" stroke="#f89820" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Java</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[JS ENGINE ACTIVE]: V8 compiler parsed ES6+. Event loop idle. Async queue clear.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#F7DF1E">
+                    <rect width="24" height="24" rx="3"/>
+                    <path d="M12.1 18.5c.3.5.7.8 1.3.8.6 0 .9-.3.9-.7s-.3-.6-.8-.8l-.8-.3c-.9-.4-1.5-.9-1.5-2 0-1.2 1-2 2.3-2 1.1 0 1.8.5 2.1 1.2l-1.3.8c-.2-.4-.5-.6-.8-.6-.4 0-.6.2-.6.5s.2.4.6.6l.8.3c1.1.4 1.7 1 1.7 2.1 0 1.3-1 2.2-2.5 2.2-1.5 0-2.4-.8-2.7-1.8l1.5-.8zm-4.7 0c.2.4.4.6.8.6.3 0 .5-.2.5-.6V12.7h1.6V18c0 1.4-1 2.2-2.3 2.2-1.2 0-1.9-.6-2.2-1.4l1.6-.8z" fill="#000000"/>
+                  </svg>
+                </span>
+                <span class="badge-name">JavaScript</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[SQL CONNECTED]: Relational database query engine online. Indexes cached.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#00758F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                    <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+                  </svg>
+                </span>
+                <span class="badge-name">SQL</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[GCC READY]: Native compilation standards loaded. Linking objects.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#00599C">
+                    <path d="M12 2L2 6.5v11l10 4.5 10-4.5v-11L12 2zm6.5 11h-2v2h-1v-2h-2v-1h2v-2h1v2h2v1zm-6-2.5h-2v1h2V14h-3v-4h3v1.5z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Python</span>
+                <span class="badge-status-dot"></span>
+              </div>
+            </div>
+            <div class="card-console-log">
+              <span class="log-prompt">&gt;</span> <span class="log-text">SYSTEM READY: Waiting for diagnostics...</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Frontend -->
+          <div class="skill-category-card trigger-skill-card">
+            <div class="terminal-card-header" data-title="frontend.json"></div>
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skills-tag-grid">
+              <div class="skill-badge" data-log="[REACT MOUNTED]: Virtual DOM initialized. Component lifecycle active.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#61DAFB" stroke-width="2">
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(0 12 12)"/>
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+                    <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>
+                    <circle cx="12" cy="12" r="1.5" fill="#61DAFB"/>
+                  </svg>
+                </span>
+                <span class="badge-name">React.js</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[JIT COMPILE]: Utility classes generated. CSS purge completed. Styles mapped.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#38BDF8">
+                    <path d="M12 6.09c-2.67 0-4.33 1.33-5 4 1-3 2.5-4 4.5-3 1.15.58 1.97 1.42 2.87 2.34C15.82 10.9 17.5 12.09 20 12.09c2.67 0 4.33-1.33 5-4-1 3-2.5 4-4.5 3-1.15-.58-1.97-1.42-2.87-2.34C16.18 7.27 14.5 6.09 12 6.09zM7 12.09c-2.67 0-4.33 1.33-5 4 1-3 2.5-4 4.5-3 1.15.58 1.97 1.42 2.87 2.34C10.82 16.9 12.5 18.09 15 18.09c2.67 0 4.33-1.33 5-4-1 3-2.5 4-4.5 3-1.15-.58-1.97-1.42-2.87-2.34C11.18 13.27 9.5 12.09 7 12.09z" transform="scale(0.8) translate(3, 3)"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Tailwind CSS</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[DOM PARSED]: Semantic elements loaded. SEO accessibility tags validated.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#E34F26">
+                    <path d="M1.5 2h21l-1.91 21.563L12 24l-8.59-2.437L1.5 2zm16.14 7H8.22l.14 1.56h9.14l-.45 5.09-4.94 1.37-4.93-1.37-.32-3.6H5.25l.48 5.4 6.27 1.74 6.27-1.74.83-9.39z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">HTML5</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[RENDER TREE]: Custom layout variables active. Flexbox/Grid matrices parsed.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#1572B6">
+                    <path d="M1.5 2h21l-1.91 21.563L12 24l-8.59-2.437L1.5 2zm16.14 6H7.13l.2 2.25h9.1l-.45 5.09-3.98 1.1-3.98-1.1-.25-2.86H5.66l.4 4.65 5.94 1.65 5.94-1.65.65-7.38z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">CSS3</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[BOOTSTRAP ACTIVE]: Responsive grid containers and component library compiled.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#7952B3">
+                    <rect width="24" height="24" rx="4"/>
+                    <path d="M6.5 6.5h5.5c1.8 0 3 .8 3 2.2 0 1.1-.7 1.8-1.8 2 .9.2 2.3.9 2.3 2.3 0 1.5-1.2 2.5-3.5 2.5H6.5v-9zm2.5 2.3v2h2.5c.7 0 1.2-.3 1.2-1 0-.6-.5-1-1.2-1H9zm0 4.2v2.2h3c.7 0 1.3-.4 1.3-1.1 0-.7-.6-1.1-1.3-1.1H9z" fill="#FFFFFF"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Bootstrap</span>
+                <span class="badge-status-dot"></span>
+              </div>
+            </div>
+            <div class="card-console-log">
+              <span class="log-prompt">&gt;</span> <span class="log-text">SYSTEM READY: Waiting for diagnostics...</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend -->
+          <div class="skill-category-card trigger-skill-card">
+            <div class="terminal-card-header" data-title="backend.js"></div>
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3>Backend</h3>
+            </div>
+            <div class="skills-tag-grid">
+              <div class="skill-badge" data-log="[NODE ONLINE]: Event-driven non-blocking I/O runtime listening. V8 compiler loaded.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#339933">
+                    <path d="M12 2L2.5 7.5v11L12 22l9.5-3.5v-11L12 2zm-1 16.5l-4-2.3V9.8l4-2.3v8.7zm2 0V7.5l4 2.3v6.7l-4 2.3z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Node.js</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[EXPRESS RUNNING]: Route registry initialized. HTTP middleware stack bound.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#444444">
+                    <rect width="24" height="24" rx="4"/>
+                    <text x="12" y="16" fill="#FFFFFF" font-family="monospace" font-weight="bold" font-size="12" text-anchor="middle">ex</text>
+                  </svg>
+                </span>
+                <span class="badge-name">Express.js</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[API ENDPOINTS OK]: JSON schemas validated. HTTP methods bound. CORS allowed.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#00A3E0" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="5" r="3"/>
+                    <circle cx="5" cy="18" r="3"/>
+                    <circle cx="19" cy="18" r="3"/>
+                    <path d="M5 15v-3a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v3M12 8v7"/>
+                  </svg>
+                </span>
+                <span class="badge-name">REST APIs</span>
+                <span class="badge-status-dot"></span>
+              </div>
+            </div>
+            <div class="card-console-log">
+              <span class="log-prompt">&gt;</span> <span class="log-text">SYSTEM READY: Waiting for diagnostics...</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Databases -->
+          <div class="skill-category-card trigger-skill-card">
+            <div class="terminal-card-header" data-title="databases.db"></div>
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                </svg>
+              </div>
+              <h3>Databases</h3>
+            </div>
+            <div class="skills-tag-grid">
+              <div class="skill-badge" data-log="[MONGO CONNECTED]: NoSQL database cursor active. BSON documents read/write OK.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#47A248">
+                    <path d="M12 1.5C12 1.5 6 7.5 6 12s4.5 8.5 6 10.5c1.5-2 6-6 6-10.5S12 1.5 12 1.5zM12 18c-2 0-3.5-1.5-3.5-3.5s1.5-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.5 3.5-3.5 3.5z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">MongoDB</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[MYSQL ONLINE]: InnoDB engine active. Database connection pool established.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#00758F" stroke-width="2" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                    <path d="M4 5v6c0 1.66 4 3 8 3s8-1.34 8-3V5"/>
+                    <path d="M4 11v6c0 1.66 4 3 8 3s8-1.34 8-3v-6"/>
+                  </svg>
+                </span>
+                <span class="badge-name">MySQL</span>
+                <span class="badge-status-dot"></span>
+              </div>
+            </div>
+            <div class="card-console-log">
+              <span class="log-prompt">&gt;</span> <span class="log-text">SYSTEM READY: Waiting for diagnostics...</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Core CS -->
+          <div class="skill-category-card trigger-skill-card">
+            <div class="terminal-card-header" data-title="core_cs.sys"></div>
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3>Core CS</h3>
+            </div>
+            <div class="skills-tag-grid">
+              <div class="skill-badge" data-log="[ALGORITHMS ACTIVE]: Complexity O(N log N) sorted. Memory pointers initialized.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#F15A24" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="5" r="2.5" fill="#F15A24"/>
+                    <circle cx="6" cy="15" r="2.5" fill="#F15A24"/>
+                    <circle cx="18" cy="15" r="2.5" fill="#F15A24"/>
+                    <line x1="12" y1="7.5" x2="6.5" y2="12.5"/>
+                    <line x1="12" y1="7.5" x2="17.5" y2="12.5"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Data Structures &amp; Algorithms</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[CLASS REGISTRY]: Inheritance trees verified. Polymorphic overrides active.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#E5C158" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                    <rect x="8" y="14" width="8" height="7" rx="1"/>
+                    <path d="M6.5 10v2h11v-2M12 12v2"/>
+                  </svg>
+                </span>
+                <span class="badge-name">OOPs</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[DBMS TRACE]: Transaction log ACID verified. Database recovery logs up.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#4DB33D" stroke-width="2" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="7" ry="2.5"/>
+                    <path d="M5 5v5c0 1.38 3.13 2.5 7 2.5s7-1.12 7-2.5V5"/>
+                    <path d="M5 10v5c0 1.38 3.13 2.5 7 2.5s7-1.12 7-2.5v-5"/>
+                    <line x1="12" y1="7.5" x2="12" y2="20"/>
+                  </svg>
+                </span>
+                <span class="badge-name">DBMS</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[SOCKETS BOUND]: TCP Handshake established. Segment sizes verified. MTU normal.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#1A56DB" stroke-width="2" stroke-linecap="round">
+                    <rect x="2" y="16" width="6" height="5" rx="1"/>
+                    <rect x="16" y="16" width="6" height="5" rx="1"/>
+                    <rect x="9" y="3" width="6" height="5" rx="1"/>
+                    <path d="M12 8v5M5 16v-3h14v3"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Computer Networks</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[KERNEL ONLINE]: Memory manager initialized. Thread scheduler priority set.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#9061F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <line x1="9" y1="3" x2="9" y2="21"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Operating Systems</span>
+                <span class="badge-status-dot"></span>
+              </div>
+            </div>
+            <div class="card-console-log">
+              <span class="log-prompt">&gt;</span> <span class="log-text">SYSTEM READY: Waiting for diagnostics...</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Tools -->
+          <div class="skill-category-card trigger-skill-card">
+            <div class="terminal-card-header" data-title="tools.config"></div>
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <h3>Tools</h3>
+            </div>
+            <div class="skills-tag-grid">
+              <div class="skill-badge" data-log="[GIT READY]: Repository HEAD verified. Remote origin synced with GitHub.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#F05032">
+                    <path d="M22.6 11.4L12.6 1.4c-.6-.6-1.5-.6-2.1 0L8.2 3.7l3.2 3.2c.4-.1.8 0 1.1.3.4.4.4 1 0 1.4-.4.4-1 .4-1.4 0-.3-.3-.4-.7-.3-1.1L7.6 4.3 1.4 10.5c-.6.6-.6 1.5 0 2.1l10 10c.6.6 1.5.6 2.1 0l8.2-8.2c.5-.5.5-1.4-.1-2zm-9.3 6.1c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Git &amp; GitHub</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[POSTMAN READY]: Environment variables loaded. API test collections run OK.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#FF6C37">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm1.07-5.75l-.9 3.6c-.1.4-.4.7-.8.7h-1.4c-.4 0-.7-.3-.8-.7l-.9-3.6c-.1-.4.2-.8.6-.8h3.6c.4 0 .7.4.6.8z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">Postman</span>
+                <span class="badge-status-dot"></span>
+              </div>
+              <div class="skill-badge" data-log="[VSC ACTIVE]: Workspace opened. Prettier and ESLint modules loaded.">
+                <span class="badge-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#007ACC">
+                    <path d="M23.9 6.5l-3.3-3.3c-.1-.1-.3-.1-.4 0L12 11.4 3.7 3.2c-.1-.1-.3-.1-.4 0L.1 6.5c-.1.1-.1.3 0 .4L8.7 12 .1 17.1c-.1.1-.1.3 0 .4l3.2 3.3c.1.1.3.1.4 0l8.3-8.2 8.2 8.2c.1.1.3.1.4 0l3.3-3.3c.1-.1.1-.3 0-.4L15.3 12l8.6-5.1c.1-.1.1-.3 0-.4z"/>
+                  </svg>
+                </span>
+                <span class="badge-name">VS Code</span>
+                <span class="badge-status-dot"></span>
+              </div>
+            </div>
+            <div class="card-console-log">
+              <span class="log-prompt">&gt;</span> <span class="log-text">SYSTEM READY: Waiting for diagnostics...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: CERTIFICATIONS -->
+    <section id="certifications" class="certifications-section scroll-trigger">
+      <div class="container">
+        <div class="terminal-prompt" data-cmd="open ./credentials"></div>
+        <h2 class="section-title">Certifications</h2>
+        
+        <div class="certifications-grid">
+          <!-- Card 1: Oracle -->
+          <div class="cert-card-tilt-container trigger-cert">
+            <div class="cert-card-placeholder">
+              <div class="terminal-card-header" data-title="oracle_ai.cert"></div>
+              <div class="cert-image-box">
+                <a href="assets/cert1.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/cert1.jpg" alt="Oracle AI Foundations" class="cert-img"></a>
+              </div>
+              <div class="cert-info">
+                <div class="cert-provider-badge">
+                  <span>Oracle</span>
+                </div>
+                <h3>AI Foundations Associate</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: AWS -->
+          <div class="cert-card-tilt-container trigger-cert">
+            <div class="cert-card-placeholder">
+              <div class="terminal-card-header" data-title="aws_architect.cert"></div>
+              <div class="cert-image-box">
+                <a href="assets/cert2.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/cert2.jpg" alt="AWS Cloud Architecting" class="cert-img"></a>
+              </div>
+              <div class="cert-info">
+                <div class="cert-provider-badge">
+                  <span>AWS Academy</span>
+                </div>
+                <h3>Cloud Architecting</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: TrendyTech SQL -->
+          <div class="cert-card-tilt-container trigger-cert">
+            <div class="cert-card-placeholder">
+              <div class="terminal-card-header" data-title="sql_superstar.cert"></div>
+              <div class="cert-image-box">
+                <a href="assets/cert3.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/cert3.jpg" alt="SQL Superstar Course" class="cert-img"></a>
+              </div>
+              <div class="cert-info">
+                <div class="cert-provider-badge">
+                  <span>TrendyTech</span>
+                </div>
+                <h3>SQL Superstar</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: MongoDB -->
+          <div class="cert-card-tilt-container trigger-cert">
+            <div class="cert-card-placeholder">
+              <div class="terminal-card-header" data-title="mongodb.cert"></div>
+              <div class="cert-image-box">
+                <a href="assets/cert4.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/cert4.jpg" alt="Introduction to MongoDB" class="cert-img"></a>
+              </div>
+              <div class="cert-info">
+                <div class="cert-provider-badge">
+                  <span>MongoDB</span>
+                </div>
+                <h3>Introduction to MongoDB</h3>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Card 6: UiPath -->
+          <div class="cert-card-tilt-container trigger-cert">
+            <div class="cert-card-placeholder">
+              <div class="terminal-card-header" data-title="uipath_automation.cert"></div>
+              <div class="cert-image-box">
+                <a href="assets/cert6.png" target="_blank" rel="noopener noreferrer"><img src="assets/cert6.png" alt="UiPath Automation Developer" class="cert-img"></a>
+              </div>
+              <div class="cert-info">
+                <div class="cert-provider-badge">
+                  <span>UiPath</span>
+                </div>
+                <h3>Automation Developer Associate</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: HackerRank -->
+          <div class="cert-card-tilt-container trigger-cert">
+            <div class="cert-card-placeholder">
+              <div class="terminal-card-header" data-title="problem_solving.cert"></div>
+              <div class="cert-image-box">
+                <a href="assets/cert5.jpg" target="_blank" rel="noopener noreferrer"><img src="assets/cert5.jpg" alt="HackerRank Problem Solving" class="cert-img"></a>
+              </div>
+              <div class="cert-info">
+                <div class="cert-provider-badge">
+                  <span>HackerRank</span>
+                </div>
+                <h3>Problem Solving (Basic)</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Microsoft Azure AZ-900 -->
+          <div class="cert-card-tilt-container trigger-cert">
+            <div class="cert-card-placeholder">
+              <div class="terminal-card-header" data-title="azure_az900.cert"></div>
+              <div class="cert-image-box">
+                <a href="assets/AZ-900_Certified_Certificate.jpeg" target="_blank" rel="noopener noreferrer"><img src="assets/AZ-900_Certified_Certificate.jpeg" alt="Microsoft Azure Fundamentals (AZ-900)" class="cert-img"></a>
+              </div>
+              <div class="cert-info">
+                <div class="cert-provider-badge">
+                  <span>Microsoft</span>
+                </div>
+                <h3>Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 7: ACHIEVEMENTS -->
+    <section id="achievements" class="achievements-section scroll-trigger">
+      <div class="container">
+        <div class="terminal-prompt" data-cmd="node query_achievements.js"></div>
+        <h2 class="section-title">Achievements &amp; Recognition</h2>
+        <p class="section-subtitle">Milestones from a track record of consistent, hands-on building.</p>
+        
+        <!-- Two Stat Counters at the top -->
+        <div class="stat-counters-row">
+          <div class="stat-counter-box">
+            <div class="counter-num" id="certCounter" data-value="7">0</div>
+            <div class="counter-label">Certifications</div>
+          </div>
+          <div class="stat-counter-box">
+            <div class="counter-num" id="projectCounter" data-value="3">0</div>
+            <div class="counter-label">Projects</div>
+          </div>
+        </div>
+        
+        <div class="achievements-cards-grid">
+          <!-- Achievement 1 -->
+          <a href="https://leetcode.com/u/tyagiaayush0007/" target="_blank" rel="noopener noreferrer" class="ach-card-link-wrapper">
+            <div class="ach-card trigger-ach">
+              <div class="ach-badge-pill">Academic / Technical</div>
+              
+              <div class="ach-image-container">
+                <img src="assets/leetcode (1).png" alt="LeetCode Solve Count" class="ach-img">
+              </div>
+              
+              <div class="ach-info">
+                <div class="ach-header-meta">
+                  <span class="ach-year">Ongoing</span>
+                  <span class="ach-inst">LeetCode</span>
+                </div>
+                <h3 class="ach-title">300+ LeetCode Problems Solved</h3>
+                <p class="ach-desc">Solved 300+ problems across data structures and algorithms, strengthening problem-solving and algorithmic thinking.</p>
+              </div>
+              
+              <div class="ach-trophy-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
+                  <path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Achievement 2 -->
+          <div class="ach-card trigger-ach">
+            <div class="ach-badge-pill">Professional / Technical</div>
+            
+            <div class="ach-image-container">
+              <img src="assets/MelodyVerse SS2.png" alt="Production Deployed Apps" class="ach-img">
+            </div>
+            
+            <div class="ach-info">
+              <div class="ach-header-meta">
+                <span class="ach-year">2026</span>
+                <span class="ach-inst">Independent Projects</span>
+              </div>
+              <h3 class="ach-title">2 Production Applications Deployed</h3>
+              <p class="ach-desc">Deployed two production-grade full-stack applications (SymptoGenie, MelodyVerse) with live demos, end-to-end authentication, and database integration.</p>
+            </div>
+            
+            <div class="ach-trophy-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"></path>
+                <path d="M6 21a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3 3 3 0 0 1 3 3v12a3 3 0 0 1-3 3z"></path>
+                <path d="M14 6H10v12h4V6z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 8: CONTACT -->
+    <section id="contact" class="contact-section scroll-trigger">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left Column: Contact Info & Title -->
+          <div class="contact-info-panel trigger-contact-left">
+            <h2 class="contact-giant-title">Let's work<br><span class="muted-title">together.</span></h2>
+            <p class="contact-panel-intro">Currently available for freelance projects and open to full-time opportunities.</p>
+            
+            <div class="contact-info-socials">
+              <a href="mailto:aayushtyagi728@gmail.com" class="social-btn-round" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/aayush-tyagi-39160b359/" target="_blank" rel="noopener noreferrer" class="social-btn-round" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="https://github.com/Aayushtyagi550" target="_blank" rel="noopener noreferrer" class="social-btn-round" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/tyagi__aayush_?igsh=djNlbnpkYmp2NTJu" target="_blank" rel="noopener noreferrer" class="social-btn-round" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Right Column: Contact Form -->
+          <div class="contact-form-panel trigger-contact-right">
+            <form id="contactForm" action="#" method="POST" novalidate>
+              <!-- Name Input -->
+              <div class="form-group">
+                <label for="fullName">FULL NAME</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required autocomplete="name">
+                <div class="field-line"></div>
+              </div>
+              
+              <!-- Email Input -->
+              <div class="form-group">
+                <label for="emailAddress">EMAIL ADDRESS</label>
+                <input type="email" id="emailAddress" name="emailAddress" placeholder="Enter your email address" required autocomplete="email">
+                <div class="field-line"></div>
+              </div>
+              
+              <!-- Phone Number Input -->
+              <div class="form-group">
+                <label for="phoneNumber">PHONE NUMBER (optional)</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number (optional)" autocomplete="tel">
+                <div class="field-line"></div>
+              </div>
+              
+              <!-- Message Input -->
+              <div class="form-group form-group-textarea">
+                <label for="message">HOW CAN I HELP YOU?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                <div class="field-line"></div>
+              </div>
+              
+              <!-- Submit Button -->
+              <button type="submit" class="btn-submit" id="sendBtn">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
-
-</body>
 
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Footer Left -->
+      <div class="footer-left">
+        <h2 class="footer-logo">Aayush.</h2>
+        <p class="footer-intro-desc">Engineering scalable full-stack systems and intelligent web applications.</p>
+      </div>
+      
+      <!-- Footer Right -->
+      <div class="footer-right">
+        <h4 class="footer-section-title">SOCIALS</h4>
+        <ul class="footer-social-list">
+          <li>
+            <a href="mailto:aayushtyagi728@gmail.com">
+              <svg class="footer-social-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email</span>
+              <span class="external-arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/aayush-tyagi-39160b359/" target="_blank" rel="noopener noreferrer">
+              <svg class="footer-social-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn</span>
+              <span class="external-arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Aayushtyagi550" target="_blank" rel="noopener noreferrer">
+              <svg class="footer-social-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+              <span class="external-arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/tyagi__aayush_?igsh=djNlbnpkYmp2NTJu" target="_blank" rel="noopener noreferrer">
+              <svg class="footer-social-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>Instagram</span>
+              <span class="external-arrow">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider-line container"></div>
+    <div class="container footer-bottom-row">
+      <div class="footer-copyright">
+        &copy; 2026 Aayush Tyagi. All rights reserved.
+      </div>
+      <div class="footer-attribution">
+        Designed & Built with passion.
+      </div>
+    </div>
+  </footer>
+
+  <button id="terminalToggleBtn" class="terminal-toggle-btn" aria-label="Open Terminal Console">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="4 17 10 11 4 5"></polyline>
+      <line class="terminal-underscore-cursor" x1="12" y1="19" x2="20" y2="19"></line>
+    </svg>
+  </button>
+
+  <!-- Interactive Terminal CLI Console Panel -->
+  <div id="terminalConsole" class="terminal-console-panel">
+    <div class="console-header">
+      <div class="console-dots">
+        <span class="console-dot dot-red"></span>
+        <span class="console-dot dot-yellow"></span>
+        <span class="console-dot dot-green"></span>
+      </div>
+      <div class="console-title">aayush@tyagi: ~ (sh)</div>
+      <button id="consoleCloseBtn" class="console-close-btn" aria-label="Close Console">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="console-body">
+      <div class="console-output-log" id="consoleOutputLog">
+        <div class="console-line system-msg">Welcome to Aayush's Interactive Terminal CLI v1.0.0.</div>
+        <div class="console-line system-msg">Type 'help' to see all available commands.</div>
+        <br>
+      </div>
+      <div class="console-quick-pills">
+        <button type="button" class="console-pill" data-cmd="about">/about</button>
+        <button type="button" class="console-pill" data-cmd="projects">/projects</button>
+        <button type="button" class="console-pill" data-cmd="skills">/skills</button>
+        <button type="button" class="console-pill" data-cmd="education">/education</button>
+        <button type="button" class="console-pill" data-cmd="contact">/contact</button>
+        <button type="button" class="console-pill" data-cmd="clear">/clear</button>
+      </div>
+      <form id="consoleForm" class="console-input-line" autocomplete="off">
+        <span class="console-prompt">aayush@tyagi:~$</span>
+        <input type="text" id="consoleInput" class="console-input" placeholder="" aria-label="Terminal Input">
+      </form>
+    </div>
+  </div>
+
+  <!-- Custom Mouse Cursor -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- Script Link -->
+  <script src="script.js"></script>
+
+  <!-- Lightbox Modal for Certificates -->
+  <div id="imageLightbox" class="lightbox-modal">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+  </div>
+
+</body>
 </html>
